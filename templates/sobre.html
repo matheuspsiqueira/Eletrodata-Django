@@ -1,0 +1,392 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eletrodata Engenharia</title>
+  <link rel="icon" href="{% static 'img/logo1.png' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_sobre.css' %}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-gradient fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/Logo.png'%}" alt="Logo Eletrodata">
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">
+              A Eletrodata
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'sobre' %}">Quem Somos</a></li>
+              <li><a class="dropdown-item" href="{% url 'etica_compliance'%}">Ética e Compliance</a></li>
+              <li><a class="dropdown-item" href="{% url 'segmentos_clientes'%}">Segmentos e Clientes</a></li>
+              <li><a class="dropdown-item" href="#">Trabalhe conosco</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">
+              Serviços
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Manutenção Predial e Industrial</a></li>
+              <li><a class="dropdown-item" href="#">Gestão de Facilities</a></li>
+              <li><a class="dropdown-item" href="#">Gestão de Sistemas Críticos</a></li>
+              <li><a class="dropdown-item" href="#">HVAC</a></li>
+              <li><a class="dropdown-item" href="#">Telecomunicações</a></li>
+              <li><a class="dropdown-item" href="#">Construção Civil</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trabalhe Conosco</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ouvidoria</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Corporativo</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#Contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--HERO-->
+  <section class="hero" id="hero">
+  <div class="overlay"></div>
+  <div class="hero-carousel">
+    <img src="{% static 'img/carrosel-1.png' %}" class="slide">
+    <img src="{% static 'img/carrosel-2.png' %}" class="slide" />
+    <img src="{% static 'img/carrosel-3.png' %}" class="slide" />
+    <img src="{% static 'img/carrosel-4.png' %}" class="slide" />
+  </div>
+  <div class="container">
+    <h1><strong>Quem somos</strong></h1>
+    <div class="linha"></div>
+  </div>
+</section>
+
+
+  <!--SOBRE-->
+  <section class="sobre">
+    <div class="container">
+      <h1>A Eletrodata</h1>
+      <div class="linha"></div>
+
+      <p>Fundada em 1986, a <strong>Eletrodata Engenharia</strong> é referência nacional em soluções especializadas em  <strong>manutenção predial</strong> e <strong>industrial</strong>, expandindo nossa atuação para a <strong>gestão de facilities, obras, montagens industriais</strong> e <strong>telecomunicações</strong>. Com mais de 35 anos de mercado, nos destacamos por oferecer serviços integrados com foco em excelência operacional, segurança e eficiência.</p>
+      <p>Ao longo dessa trajetória, construímos uma <strong>presença sólida em todo o território brasileiro</strong>, atendendo clientes nos mais diversos segmentos com operações ativas que abrangem contratos estratégicos em instituições federais, empresas privadas e grandes centros logísticos.</p>
+      <p>Nosso maior ativo é o nosso <strong>time de colaboradores</strong>. São mais de <strong>3.000 profissionais capacitados e comprometidos</strong> com a entrega de resultados de alto padrão. Investimos constantemente em <strong>capacitação técnica, valorização humana</strong> e <strong>cultura de segurança</strong>, porque acreditamos que são as pessoas que sustentam a <strong>qualidade</strong> e a <strong>credibilidade</strong> do nosso trabalho.</p>
+      <p>Nosso compromisso é claro: oferecer soluções sob medida, com <strong>ética, inovação</strong> e <strong>respeito às necessidades de cada cliente</strong>.</p>
+    </div>
+  </section>
+
+
+  <!--VIDEO-->
+  <section class="video">
+    <div class="container">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/DnNmTqVdASg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!--MISSÃO-CARDS-->
+  <section class="missao">
+    <div class="container">
+      <div class="missao-cards">
+        <div class="card">
+          <img src="{% static 'img/alvo.png' %}" alt="Ícone 1">
+          <h2>Missão</h2>
+          <div class="linha"></div>
+          <p>O Nosso propósito é resolver seus problemas secundários para que você possa focar no SEU propósito.</p>
+        </div>
+        
+        <div class="card">
+          <img class="img2" src="{% static 'img/olho.png' %}" alt="Ícone 2">
+          <h2>Visão</h2>
+          <div class="linha"></div>
+          <p>Ser uma empresa mais atrativa para o mercado, clientes, colaboradores e investidores até 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--VALORES-CARDS-->
+
+  <section class="valores">
+    <div class="container">
+      <img src="{% static 'img/diamante.png' %}" alt="ícone 3">
+      <h2>Valores</h2>
+      <div class="linha"></div>
+
+      <div class="cards-valores">
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Ética</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>O mais essencial dos princípios.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Qualidade</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Somos cumpridores das obrigações assumidas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Credibilidade</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Somos uma empresa que passa confiança.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Acolhimento e Transparência</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>O cliente se sente confortável para resolver qualquer questão tendo a ELETRODATA como fornecedora.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Inclusão e Valorização</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Prezamos por uma cultura de respeito a diferença e valorização dos colaboradores.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Entusiasmo</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Motivamo-nos com facilidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Foco no cliente</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Conectando diretamente com o nosso propósito.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Cuidado com os custos</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Austeridade para o bem de todos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <p><strong>Desenvolver lideranças</strong></p>
+            </div>
+          
+            <div class="card-back">
+              <p>Fundamental para nos profissionalizarmos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--CERTIFICAÇÕES-->
+
+<section class="certificacao">
+  <div class="container-certificacao">
+    <!-- Coluna Esquerda -->
+    <div class="coluna-esquerda">
+      <div class="topo-esquerda">
+        <div class="titulo-certificacao">
+          <h1>Certificações</h1>
+          <div class="linha"></div>
+        </div>
+        <img src="{% static 'img/iso-2015.png' %}" alt="Imagem 1">
+        <img class="img2" src="{% static 'img/pbqp-h.png' %}" alt="Imagem 2">
+      </div>
+    </div>
+
+    <!-- Divisor Vertical -->
+    <div class="divisor-vertical"></div>
+
+    <!-- Coluna Direita -->
+    <div class="coluna-direita">
+      <p>Estamos aptos a obter as seguintes certificações:</p>
+      <div class="certificacao-imagens">
+        <img class="img3" src="{% static 'img/iso-2x.png' %}" alt="Imagem 3">
+        <img class="img4" src="{% static 'img/iso-9001-2015.png' %}" alt="Imagem 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--LINHA DO TEMPO-->
+
+<section class="linha-do-tempo">
+  <div class="carrossel-container">
+    <button class="btn-nav left">&#8592;</button>
+    <div class="carrossel" id="carrossel">
+      <!-- Repetir esse bloco para 8 imagens -->
+      <div class="item">
+        <span class="ano cima">2025</span>
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 2025">
+      </div>
+      <div class="item">
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 2023">
+        <span class="ano baixo">2023</span>
+      </div>
+      <div class="item">
+        <span class="ano cima">2018</span>
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 2018">
+      </div>
+      <div class="item">
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 2015">
+        <span class="ano baixo">2015</span>
+      </div>
+      <div class="item">
+        <span class="ano cima">2010</span>
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 2010">
+      </div>
+      <div class="item">
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 2000">
+        <span class="ano baixo">2000</span>
+      </div>
+      <div class="item">
+        <span class="ano cima">1996</span>
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 1996">
+      </div>
+      <div class="item">
+        <img src="{% static 'img/clientes.png' %}" alt="Foto 1987">
+        <span class="ano baixo">1987</span>
+      </div>
+      <!-- repita até a 8ª imagem -->
+    </div>
+    <button class="btn-nav right">&#8594;</button>
+  </div>
+</section>
+
+
+<!--POLITICA-INTEGRADA-->
+
+<section class="politica">
+  <div class="container">
+    <h1>Política Integrada (SGI)</h1>
+    <div class="linha"></div>
+
+    <p>Na Eletrodata Engenharia, temos o compromisso de oferecer soluções de manutenção predial, industrial e gestão de facilities com excelência, responsabilidade e foco na melhoria contínua. Nossa Política Integrada de Qualidade, Saúde, Segurança e Meio Ambiente é a base de uma atuação técnica sólida, sustentável e orientada à satisfação de nossos clientes e à valorização das pessoas.</p>
+
+    <p class="subtitulo">Nossos princípios são:</p>
+    <ul>
+      <li>
+        <p>Qualidade nos serviços prestados</p>
+      </li>
+      <li>
+        <p>Segurança no ambiente de trabalho</p>
+      </li>
+      <li>
+        <p>Responsabilidade socioambiental</p>
+      </li>
+      <li>
+        <p>Melhoria contínua dos processos</p>
+      </li>
+      <li>
+        <p class="margin">Valorização das pessoas</p>
+      </li>
+    </ul>
+
+    <p class="margin-footer">Essa política orienta todas as áreas da Eletrodata Engenharia e está integrada à nossa missão de sermos referência nacional em manutenção predial, industrial, gestão de facilities e telecomunicações.</p>
+  </div>
+</section>
+
+<!--FOOTER-->
+
+<footer>
+  <div class="container">
+    <p><strong>Inovar. Transformar. Evoluir</strong></p>
+
+    <div class="social">
+      <p><strong>Contrate a Eletrodata</strong></p>
+      <a href="https://facebook.com/eletrodataengenharia" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/12.png' %}" alt="Facebook"></a>
+      <a href="https://linkedin.com/company/eletrodata-engenharia"><img src="{% static 'img/13.png' %}" alt="LinkedIn"></a>
+      <a href="https://instagram.com/eletrodataengenharia"><img src="{% static 'img/14.png' %}" alt="Instagram"></a>
+      <a href="https://youtube.com/@Eletrodata_Engenharia"><img class="youtube" src="{% static 'img/15.png' %}" alt="YouTube"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/script_carousel.js' %}"></script>
+
+</body>
+</html>

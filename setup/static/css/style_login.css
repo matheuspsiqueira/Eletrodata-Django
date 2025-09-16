@@ -1,0 +1,96 @@
+body {
+    background-color: #001441;
+}
+
+.page-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 85px; /* altura da navbar */
+    box-sizing: border-box;
+}
+
+/* Caixa principal */
+.container-login {
+    width: 420px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Título */
+.container-login h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.input-login {
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.input-login:focus {
+    outline: none;
+    box-shadow: 0 0 8px #00558C;
+    border: 1px solid #00558C;
+}
+
+/* Botão */
+.btn-login {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00558C, #012169);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    overflow: hidden;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #012169, #00558C);
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.btn-login:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.btn-login:hover {
+    transform: scale(1.02);
+}
+
+/* Link de recuperação */
+.link-recuperar {
+    color: #E0004D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-recuperar:hover {
+    text-decoration: underline;
+}

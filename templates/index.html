@@ -1,0 +1,309 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eletrodata Engenharia</title>
+  <link rel="icon" href="{% static 'img/logo1.png' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-gradient fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/Logo.png'%}" alt="Logo Eletrodata">
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">
+              A Eletrodata
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'sobre' %}">Quem Somos</a></li>
+              <li><a class="dropdown-item" href="{% url 'etica_compliance'%}">Ética e Compliance</a></li>
+              <li><a class="dropdown-item" href="{% url 'segmentos_clientes'%}">Segmentos e Clientes</a></li>
+              <li><a class="dropdown-item" href="#">Trabalhe conosco</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">
+              Serviços
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Manutenção Predial e Industrial</a></li>
+              <li><a class="dropdown-item" href="#">Gestão de Facilities</a></li>
+              <li><a class="dropdown-item" href="#">Gestão de Sistemas Críticos</a></li>
+              <li><a class="dropdown-item" href="#">HVAC</a></li>
+              <li><a class="dropdown-item" href="#">Telecomunicações</a></li>
+              <li><a class="dropdown-item" href="#">Construção Civil</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trabalhe Conosco</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ouvidoria</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Corporativo</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#Contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--HERO-->
+  <section class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="container">
+      <h1><strong>Inovar</strong> para transformar o futuro.</h1>
+      <h1><strong>Evoluir</strong> para chegar mais longe!</h1>
+      <div class="linha"></div>
+      <p>Há <strong>38 anos</strong> oferecemos soluções completas em <strong>Manutenção predial</strong> e <strong>Industrial</strong> e <strong>Gestão de facilities</strong> para diversos setores.</p>
+      <button class="botao">Saiba mais</button>
+    </div>
+  </section>
+
+  <!--SOBRE-->
+  <section class="sobre">
+    <div class="container">
+      <h1>Eletrodata Engenharia</h1>
+      <div class="linha"></div>
+      <p>Com <strong>38 anos</strong> de história, a <strong>Eletrodata Engenharia é referência nacional</strong> em serviços especializados de <strong>manutenção predial, manutenção industrial, gestão de facilities</strong> e <strong>telecomunicação</strong>. Atuamos com excelência e compromisso em contratos públicos e privados, entregando soluções integradas, com alta performance técnica e foco total na operação dos nossos clientes.</p>
+      <a href="sobre.html"><button class="botao-sobre">Saiba mais</button></a>
+
+      <div class="sobre-cards">
+        <div class="card">
+          <div class="icone">
+            <img src="{% static 'img/2.svg'%}" alt="ícone estrela">
+          </div>
+          <div class="numero-linha">
+            <h2 class="contador" data-target="38">0</h2>
+            <h2>anos</h2>
+          </div>
+          <h3>de experiência</h3>
+          <div class="linha"></div>
+          <p>Atendendo diferentes instituições</p>
+        </div>
+
+        <div class="card">
+          <div class="icone">
+            <img src="{% static 'img/3.svg'%}" alt="ícone estrela">
+          </div>
+          <div class="numero-linha">
+            <h2>+</h2>
+            <h2 class="contador" data-target="3400">0</h2>
+          </div>
+          <h3>colaboradores</h3>
+          <div class="linha"></div>
+          <p>Equipes treinadas e atualizadas</p>
+        </div>
+
+        <div class="card">
+          <div class="icone">
+            <img src="{% static 'img/4.svg'%}" alt="ícone estrela">
+          </div>
+          <div class="numero-linha">
+            <h2 class="contador" data-target="4000000" data-format="milhoes">0</h2>
+          </div>
+          <h3>de área gerenciada</h3>
+          <div class="linha"></div>
+          <p>Presença nacional com unidades técnicas em diversos estados</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--NOSSOS SERVIÇOS-->
+
+  <section class="servicos">
+    <div class="container">
+      <h1>Nossos serviços</h1>
+      <div class="linha"></div>
+
+      <div class="cards-servicos">
+        <div class="card-servico">
+          <img src="{% static 'img/predial.png'%}" alt="Serviço 1">
+          <p>Manutenção Predial</p>
+        </div>
+
+        <div class="card-servico">
+          <img src="{% static 'img/industrial.png'%}" alt="Serviço 2">
+          <p>Manutenção Industrial</p>
+        </div>
+
+        <div class="card-servico">
+          <img src="{% static 'img/facilities.png'%}" alt="Serviço 3">
+          <p>Gestão de Facilities</p>
+        </div>
+
+        <div class="card-servico">
+          <img src="{% static 'img/HVAC.png'%}" alt="Serviço 4">
+          <p>HVAC</p>
+        </div>
+
+        <div class="card-servico">
+          <img src="{% static 'img/ambientes.png'%}" alt="Serviço 5">
+          <p>Ambientes de Missão Crítica</p>
+        </div>
+
+        <div class="card-servico">
+          <img src="{% static 'img/telecom.png'%}" alt="Serviço 6">
+          <p>Telecomunicações</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+  <!--OPORTUNIDADE-->
+
+  <section class="oportunidade">
+    <div class="container">
+      <button>TRABALHE CONOSCO</button>
+      <div class="deficiente">
+        <img src="{% static 'img/7.svg.jpg'%}" alt="deficiente">
+        <h1>ORTUNIDADE PARA PORTADORES DE DEFICIÊNCIA</h1>
+      </div>
+      <button>CADASTRE-SE</button>
+    </div>
+  </section>
+
+
+  <!--ESTADOS-->
+
+  <section class="estados">
+    <div class="overlay"></div>
+    <div class="container">
+
+      <div class="conteudo-esquerdo">
+        <h1>Estados de atuação</h1>
+        <div class="linha"></div>
+        <div class="lista-estados">
+          <p>Alagoas</p>
+          <p>Sergipe</p>
+          <p>Ceará</p>
+          <p>Distrito Federal</p>
+          <p>Espírito Santo</p>
+          <p>Maranhão</p>
+          <p>Mato Grosso</p>
+          <p>São Paulo</p>
+          <p>Tocantins</p>
+          <p>Mato Grosso do Sul</p>
+          <p>Minas Gerais</p>
+          <p>Pernambuco</p>
+          <p>Piauí</p>
+          <p>Rio de Janeiro</p>
+          <p>Rio Grande do Sul</p>
+          <p>Rio Grande do Norte</p>
+          <p>Bahia (CSC)</p>
+        </div>
+      </div>
+      
+      <div class="mapa">
+        <img src="{% static 'img/5.png'%}" alt="mapa">
+      </div>
+    
+    </div>
+  </section>
+
+
+  <!--CLIENTES-->
+
+  <section class="cliente">
+  <div class="container">
+    <div class="esquerda">
+      <button>Quero ser cliente</button>
+      <img src="{% static 'img/clientes.png'%}" alt="">
+    </div>
+
+    <div class="direita">
+      <p>Na Eletrodata, cada cliente é atendido com <strong>soluções personalizadas, compromisso com a qualidade</strong> e <strong>foco em resultados.</strong></p>
+
+      <p>Se você busca uma parceria sólida em <strong>manutenção predial, industrial</strong> ou <strong>gestão de facilities,</strong> estamos prontos para construir a solução ideal para o seu negócio.</p>
+    </div>
+  </div>
+</section>
+
+
+<!--CONTATO-->
+
+<section id="Contato" class="contato">
+  <div class="container">
+    <h1> Contate-nos</h1>
+    <div class="linha"></div>
+
+    <div class="contato-card">
+        
+      <div class="card-contato">
+        <div class="icone-contato">
+          <img src="{% static 'img/8.svg'%}" alt="">
+        </div>
+          <h2>Telefone</h2>
+          <p><strong>Matriz:</strong> (71) 3378-1010</p>
+          <p><strong>Comercial:</strong> (21) 3179-6256</p>
+        </div>
+
+        <div class="card-contato">
+          <div class="icone-contato">
+            <img src="{% static 'img/9.svg'%}" alt="">
+          </div>
+          <h2>E-mail</h2>
+          <p class="margin">eletrodata@eletrodataengenharia.com.br</p>
+        </div>
+
+        <div class="card-contato">
+          <div class="icone-contato">
+            <img src="{% static 'img/10.svg'%}" alt="">
+          </div>
+          <h2>Endereço Matriz</h2>
+          <p>Av. Santos Dumont, 1883 - Ed. Aero Empresarial & Hotel, salas 1023 a 1029 Centro - Lauro de Freitas BA</p>
+          <p>CEP 42.702-400</p>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+
+<!--FOOTER-->
+<footer>
+  <div class="container">
+    <p><strong>Inovar. Transformar. Evoluir</strong></p>
+
+    <div class="social">
+      <p><strong>Contrate a Eletrodata</strong></p>
+      <a href="https://facebook.com/eletrodataengenharia" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/12.png' %}" alt="Facebook"></a>
+      <a href="https://linkedin.com/company/eletrodata-engenharia"><img src="{% static 'img/13.png' %}" alt="LinkedIn"></a>
+      <a href="https://instagram.com/eletrodataengenharia"><img src="{% static 'img/14.png' %}" alt="Instagram"></a>
+      <a href="https://youtube.com/@Eletrodata_Engenharia"><img class="youtube" src="{% static 'img/15.png' %}" alt="YouTube"></a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

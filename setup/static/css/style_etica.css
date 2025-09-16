@@ -1,0 +1,350 @@
+
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pseudo-elemento para a imagem animada */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../img/bg-etica.png') center center / cover no-repeat;
+  z-index: 0;
+  animation: zoomInOut 15s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+  .hero .linha{
+    width: 18%;
+    border: 4px solid #E0004D;
+    margin-top: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 80px;
+    margin: 0;
+    color: #ffffff;
+  }
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+/*ETICA*/
+
+.etica .etica-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.etica .texto {
+  flex: 1;
+}
+
+.etica .imagem img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 40px;
+}
+
+.etica h1 {
+  font-size: 40px;
+  width: 70%;
+  color: #E0004D;
+  margin-top: 40px;
+}
+
+.etica .linha {
+    width: 15%;
+    border: 3px solid #00558C;
+    margin-bottom: 30px;
+}
+
+.etica p{
+    font-size: 22px;
+    text-align: justify;
+}
+
+
+/*COMPLIANCE*/
+
+.compliance .compliance-conteudo {
+  display: flex;
+  align-items: stretch; /* Garante que ambos tenham mesma altura */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.compliance .texto {
+  flex: 1;
+  background-color: #00558C;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.compliance .imagem {
+  flex: 1;
+  display: flex;
+}
+
+.compliance .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha totalmente */
+}
+
+.compliance h1 {
+  font-size: 40px;
+  font-weight: bold;
+  width: 70%;
+  color: #E0004D;
+  margin-top: 40px;
+}
+
+.compliance .linha {
+  width: 8%;
+  border: 3px solid #00558C;
+  margin-bottom: 30px;
+}
+
+.compliance p {
+  font-size: 22px;
+  color: #ffffff;
+  text-align: justify;
+}
+
+
+/*Política de Privacidade*/
+
+.politica h1 {
+  font-size: 40px;
+  font-weight: bold;
+  width: 70%;
+  color: #E0004D;
+  margin-top: 80px;
+}
+
+.politica .linha {
+  width: 8%;
+  border: 3px solid #00558C;
+  margin-bottom: 40px;
+}
+
+.politica p {
+  font-size: 22px;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.politica .politica-conteudo {
+  display: flex;
+  align-items: stretch; /* Garante que ambos tenham mesma altura */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.politica .texto {
+  flex: 1;
+  background-color: #00558C;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.politica .imagem {
+  flex: 1;
+  display: flex;
+}
+
+.politica .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha totalmente */
+}
+
+
+/*EMAIL*/
+
+.email p{
+  font-size: 22px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.email .email-cor{
+  color: #E0004D;
+  font-weight: bold;
+}
+
+
+/* Tablets e abaixo */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero .linha {
+    width: 30%;
+  }
+
+  .etica h1, .compliance h1, .politica h1{
+    width: 100%;
+    text-align: center;
+  }
+
+  .linha {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .etica .linha{
+    width: 50%;
+  }
+
+  .compliance .linha{
+    width: 25%;
+  }
+
+  .politica .linha{
+    width: 50%;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .hero .linha {
+    width: 40%;
+  }
+
+  .etica .etica-conteudo,
+  .compliance .compliance-conteudo,
+  .politica .politica-conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .etica .texto,
+  .compliance .texto,
+  .politica .texto {
+    text-align: center;
+  }
+
+  .email p {
+    padding: 20px 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Telas muito pequenas (ex: celulares menores) */
+
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .hero .linha {
+    width: 60%;
+    border-width: 2px;
+  }
+
+  .etica .texto,
+  .compliance .texto,
+  .politica .texto {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .etica h1,
+  .compliance h1,
+  .politica h1 {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .etica p,
+  .compliance p,
+  .politica p {
+    font-size: 18px;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .etica .imagem img,
+  .compliance .imagem img,
+  .politica .imagem img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .etica .linha,
+  .compliance .linha,
+  .politica .linha {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .email p {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+}

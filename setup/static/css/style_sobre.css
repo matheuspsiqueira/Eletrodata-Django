@@ -1,0 +1,626 @@
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero-carousel .slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+  .hero .linha{
+    width: 18%;
+    border: 4px solid #E0004D;
+    margin-top: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 80px;
+    margin: 0;
+  }
+
+
+  /*SOBRE*/
+
+  .sobre .container h1{
+    color: #E0004D;
+    font-weight: bold;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .sobre .container .linha{
+    width: 10%;
+    border: 3px solid #00558C;
+    margin-bottom: 40px;
+  }
+
+  .sobre .container p{
+    font-size: 22px;
+  }
+  
+
+  /*VIDEO*/
+
+.video {
+  margin-top: 70px;
+  background-color: #d8d8d8;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+
+.video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url('../img/logo_branca.png'); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  opacity: 0.2; 
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.video-wrapper iframe {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 8px;
+}
+
+
+
+  /*MISSÃO-CARDS*/
+
+  .missao-cards {
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.missao-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  flex: 1 1 250px;
+  background-color: #fdfaf5;
+  border: none;
+}
+
+.missao-cards .card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.missao-cards .card .img2{
+  width: 100px;
+}
+
+.missao-cards .card h2 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  color: #E0004D;
+  font-weight: bold;
+}
+
+.missao-cards .card .linha{
+  width: 20%;
+  border: 3px solid #00558C;
+  margin-bottom: 10px;
+}
+
+.missao-cards .card p {
+  font-size: 20px;
+}
+
+
+/* VALORES-CARDS */
+
+.valores .container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.valores .container img{
+  width: 80px;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.valores .container h2{
+  font-size: 40px;
+  margin-bottom: 5px;
+  color: #E0004D;
+  font-weight: bold;
+}
+
+.valores .container .linha{
+  width: 5%;
+  border: 3px solid #00558C;
+  margin-bottom: 40px;
+}
+
+.valores .cards-valores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  margin-bottom: 40px;
+  background-color: #fdfaf5;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  perspective: 1000px;
+  height: 100px; 
+  width: 100%;
+  position: relative;
+}
+
+.card p{
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+/*ANIMAÇÃO-FLIP*/
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #00558C;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  text-align: center;
+  font-size: 16px;
+  padding: 0 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+
+/*CERTIFICACAO*/
+
+.certificacao{
+  background-color: #E0004D;
+}
+
+.container-certificacao {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+}
+
+.coluna-esquerda,
+.coluna-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.topo-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topo-esquerda img{
+  width: 100px;
+}
+
+.topo-esquerda .img2{
+  width: 180px;
+}
+
+.titulo-certificacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.titulo-certificacao h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.titulo-certificacao .linha {
+  width: 50%;
+  border: 3px solid #00558C;
+}
+
+.divisor-vertical {
+  width: 3px;
+  background-color: #ffffff;
+  height: 150px;
+  margin: 0 50px;
+}
+
+.coluna-direita p{
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.certificacao-imagens {
+  display: flex;
+  gap: 20px;
+}
+
+.certificacao-imagens img {
+  width: 100px;
+  height: 100px;
+}
+
+.certificacao-imagens .img3{
+  width: 250px;
+  height: 100px;
+}
+
+
+/* Linha do Tempo */
+
+.linha-do-tempo {
+  margin: 40px 0;
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrossel-container {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carrossel {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 250px;
+  position: relative;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  margin: 8px;
+}
+
+.ano {
+  font-weight: bold;
+  font-size: 22px;
+  color: #E0004D;
+  display: block;
+}
+
+.ano.cima {
+  margin-bottom: 8px;
+}
+
+.btn-nav {
+  background-color: #00558C;
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.btn-nav.left {
+  left: 10px;
+}
+
+.btn-nav.right {
+  right: 10px;
+}
+
+
+/*POLITICA*/
+
+.politica .container h1{
+  font-size: 40px;
+  font-weight: bold;
+  color: #E0004D;
+  margin-top: 40px;
+}
+
+.politica .container .linha{
+  width: 10%;
+  border: 3px solid #00558C;
+  margin-bottom: 40px;
+}
+
+.politica .container p{
+  font-size: 22px;
+}
+
+.subtitulo{
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.politica .container .margin{
+  margin-bottom: 30px;
+}
+
+.politica .container .margin-footer{
+  margin-bottom: 80px;
+}
+
+
+/* RESPONSIVO GERAL */
+
+@media (max-width: 1200px) {
+  .missao-cards {
+    gap: 100px;
+  }
+
+  .valores .cards-valores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-certificacao {
+    align-items: flex-start;
+  }
+
+  .divisor-vertical {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .missao-cards {
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .valores .cards-valores {
+    grid-template-columns: 1fr;
+  }
+
+  .carrossel {
+    gap: 20px;
+  }
+
+  .btn-nav {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+  .item {
+    width: 200px;
+  }
+
+  .linha {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  }
+
+  .video::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-carousel .slide {
+    object-position: top;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero .linha {
+    width: 30%;
+  }
+
+  .sobre .container h1,
+  .politica .container h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .sobre .container p,
+  .politica .container p {
+    font-size: 18px;
+    text-align: justify;
+    padding: 0 20px;
+  }
+
+  .video-wrapper iframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .missao-cards .card h2,
+  .valores .container h2 {
+    font-size: 30px;
+  }
+
+  .certificacao-imagens {
+    align-items: flex-start;
+  }
+
+  .certificacao-imagens img {
+    width: 80px;
+    height: auto;
+  }
+
+  .certificacao-imagens .img3 {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .video-wrapper iframe {
+    height: 200px;
+  }
+
+  .valores .container .linha,
+  .sobre .container .linha,
+  .politica .container .linha {
+    width: 40px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .item {
+    width: 160px;
+  }
+
+  .ano {
+    font-size: 18px;
+  }
+
+  .btn-nav {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+
+  .topo-esquerda img,
+  .topo-esquerda .img2 {
+    width: 80px;
+  }
+
+  .titulo-certificacao h1 {
+    font-size: 24px;
+  }
+
+  .certificacao-imagens {
+    gap: 25px;
+  }
+
+  .coluna-direita p{
+    font-size: 15px;
+  }
+}
