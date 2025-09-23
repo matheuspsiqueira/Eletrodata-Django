@@ -1,13 +1,15 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eletrodata Engenharia</title>
-  <link rel="icon" href="../media/logo1.png">
+  <link rel="icon" href="{% static 'img/logo1.png' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/base.css">
-  <link rel="stylesheet" href="../static/css/style_etica.css">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_etica.css' %}">
 </head>
 
 <body>
@@ -15,8 +17,8 @@
     <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-gradient fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="../media/Logo.png" alt="Logo Eletrodata">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/Logo.png'%}" alt="Logo Eletrodata">
       </a>
       <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
@@ -29,9 +31,9 @@
               A Eletrodata
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="sobre.html">Quem Somos</a></li>
-              <li><a class="dropdown-item" href="etica_compliance.html">Ética e Compliance</a></li>
-              <li><a class="dropdown-item" href="segmentos_clientes.html">Segmentos e Clientes</a></li>
+              <li><a class="dropdown-item" href="{% url 'sobre' %}">Quem Somos</a></li>
+              <li><a class="dropdown-item" href="{% url 'etica_compliance'%}">Ética e Compliance</a></li>
+              <li><a class="dropdown-item" href="{% url 'segmentos_clientes'%}">Segmentos e Clientes</a></li>
               <li><a class="dropdown-item" href="#">Trabalhe conosco</a></li>
             </ul>
           </li>
@@ -57,15 +59,8 @@
             <a class="nav-link" href="#">Ouvidoria</a>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#">
-              Corporativo
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://webmail.eletrodataengenharia.com.br/">Webmail</a></li>
-              <li><a class="dropdown-item" href="https://www.dropbox.com/scl/fo/9wzatyvy8f4n39ykdo8v1/AF5zCEoeKIyqBXG5KF_z0X8?rlkey=rjaojz6cvo1uxaey7tdfz9mgr&dl=0">PGI</a></li>
-              <li><a class="dropdown-item" href="https://portais.eletrodataengenharia.com.br/users/login">MHSW</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Corporativo</a>
           </li>
 
           <li class="nav-item">
@@ -99,7 +94,7 @@
                     </p>
                 </div>
                 <div class="imagem">
-                    <img src="../media/etica.png" alt="Imagem representando ética">
+                    <img src="{% static 'img/etica.png' %}" alt="Imagem representando ética">
                 </div>
             </div>
         </div>
@@ -118,7 +113,7 @@
                     <p>Clique abaixo e faça o download do PIC – PROGRAMA DE INTEGRIDADE CORPORATIVA (COMPLIANCE)</p>
                 </div>
                 <div class="imagem">
-                    <img src="../media/Compliance.png" alt="Imagem representando compliance">
+                    <img src="{% static 'img/Compliance.png' %}" alt="Imagem representando compliance">
                 </div>
             </div>
         </div>
@@ -132,7 +127,7 @@
             <div class="linha"></div>
             <div class="politica-conteudo">
               <div class="imagem">
-                <img src="../media/LGPD.png" alt="Imagem representando politica">
+                <img src="{% static 'img/LGPD.png' %}" alt="Imagem representando politica">
               </div>
               <div class="texto">
                 <p>A Lei Geral de Proteção de Dados (LGPD), n° 13.709 , foi sancionada em agosto de 2018 e entrou em vigor em setembro de 2020, com principal objetivo de garantir transparência no uso da proteção dos dados pessoais das pessoas físicas em quaisquer meios. Esta lei passou por uma renovação quanto a Lei nº 12.965, de 23 de abril de 2014, chamada também de Marco Civil da Internet, que tinha por objetivo monitorar esse tipo de transação.</p>
@@ -152,19 +147,19 @@
 
 
     <!--FOOTER-->
-    <footer>
-    <div class="container">
-        <p><strong>Inovar. Transformar. Evoluir</strong></p>
+<footer>
+  <div class="container">
+    <p><strong>Inovar. Transformar. Evoluir</strong></p>
 
-        <div class="social">
-        <p><strong>Contrate a Eletrodata</strong></p>
-        <a href="https://facebook.com/eletrodataengenharia" target="_blank" rel="noopener noreferrer"><img src="../media/12.png" alt="Facebook"></a>
-        <a href="https://linkedin.com/company/eletrodata-engenharia"><img src="../media/13.png" alt="LinkedIn"></a>
-        <a href="https://instagram.com/eletrodataengenharia"><img src="../media/14.png" alt="Instagram"></a>
-        <a href="https://youtube.com/@Eletrodata_Engenharia"><img class="youtube" src="../media/15.png" alt="YouTube"></a>
-        </div>
+    <div class="social">
+      <p><strong>Contrate a Eletrodata</strong></p>
+      <a href="https://facebook.com/eletrodataengenharia" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/12.png' %}" alt="Facebook"></a>
+      <a href="https://linkedin.com/company/eletrodata-engenharia"><img src="{% static 'img/13.png' %}" alt="LinkedIn"></a>
+      <a href="https://instagram.com/eletrodataengenharia"><img src="{% static 'img/14.png' %}" alt="Instagram"></a>
+      <a href="https://youtube.com/@Eletrodata_Engenharia"><img class="youtube" src="{% static 'img/15.png' %}" alt="YouTube"></a>
     </div>
-    </footer>
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
