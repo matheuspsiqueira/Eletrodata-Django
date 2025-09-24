@@ -1,68 +1,44 @@
-body{
-    background-color: #fdfaf5;
-
+/* Compensar a altura da navbar fixa */
+body {
+  padding-top: 90px; /* Ajuste até o cabeçalho descer o suficiente */
+  background-color: #f8f9fa;
 }
 
-.sidebar {
-  width: 220px;
-  min-height: 100vh;
+/* Cabeçalho */
+header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #012169; /* cor personalizada */
 }
 
-.sidebar .nav-link.active {
-  background-color: #0d6efd;
+header p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Título dos cards */
+.card-title {
+  font-weight: bold;
+}
+
+/* Status de serviços */
+.status-ok {
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
+.status-warning {
+  background-color: #ffc107;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-.dropdown-menu {
-  background-color: #ffffff;
-  border: none;
-  margin-top: 0; 
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-  display: block; 
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.dropdown-menu .dropdown-item {
-  color: #00558c !important;
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #E0004D !important;
-  background-color: #ffffff;
-}
-
-
-.profile{
-    background-color: grey;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-
-.profile a{
-    text-decoration: none;
-}
-
-.profile .dropdown-menu {
-  right: 0;
-  left: auto;
-  margin-top: 5px;
-}
-
-footer{
-    width: 220px;
+.status-error {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
